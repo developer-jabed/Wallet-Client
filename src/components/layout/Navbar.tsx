@@ -40,6 +40,7 @@ export function Navbar() {
     const handleLogout = async () => {
         await logout(undefined);
         dispatch(authApi.util.resetApiState());
+        console.log(userData)
         toast.success(`${userData?.data?.name} logout successfully`);
         navigate("/");
     };

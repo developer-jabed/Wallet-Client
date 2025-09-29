@@ -25,7 +25,7 @@ export const authApi = baseApi.injectEndpoints({
                 url: "/auth/logout",
                 method: "POST",
             }),
-            invalidatesTags: ["User"], // ✅ tell RTK Query the User cache is now invalid
+            invalidatesTags: ["User"], 
         }),
 
         resetPassword: builder.mutation({

@@ -10,6 +10,7 @@ import Register from "@/pages/auth/Register";
 
 import { dashboardRoutes } from "./dashboardRoutes";
 import Login from "@/pages/auth/Login";
+import NotFound from "@/pages/not-found/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ export const router = createBrowserRouter([
       { path: "faq", element: <Faq /> },
       { path: "login", element: <Login /> },
       { path: "auth/register", element: <Register /> },
-      dashboardRoutes, 
+      dashboardRoutes,
     ],
+
+  },
+  {
+    path: "*", element: <NotFound />
   },
 ]);
